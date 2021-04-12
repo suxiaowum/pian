@@ -50,7 +50,7 @@ export const constantRoutes = [{
         redirect: '/dashboard',
         children: [{
             path: 'dashboard',
-            name: 'Dashboard',
+            name: '主面板',
             component: () =>
                 import ('@/views/dashboard/index'),
             meta: { title: '主面板', icon: 'dashboard' }
@@ -62,20 +62,20 @@ export const constantRoutes = [{
         component: Layout,
         redirect: '/example/table',
         name: 'Example',
-        meta: { title: 'Example', icon: 'el-icon-s-help' },
+        meta: { title: '微信', icon: 'el-icon-s-help' },
         children: [{
                 path: 'table',
                 name: 'Table',
                 component: () =>
                     import ('@/views/table/index'),
-                meta: { title: 'Table', icon: 'table' }
+                meta: { title: '微信列表', icon: 'table' }
             },
             {
                 path: 'tree',
                 name: 'Tree',
                 component: () =>
                     import ('@/views/tree/index'),
-                meta: { title: 'Tree', icon: 'tree' }
+                meta: { title: '登录微信', icon: 'tree' }
             }
         ]
     },

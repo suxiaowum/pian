@@ -156,27 +156,51 @@
         >
       </el-row>
     </div>
+    <div class="totale_box">
+      <el-alert
+        title="公告：本系统旨在助力企业宣传，规范客服行为，提升企业形象。禁止使用本系统进行电信诈骗、网络赌博、非法传销等一系列违法活动。一经发现，立即封号处理！"
+        type="info"
+        show-icon
+        :closable="false"
+      >
+      </el-alert>
+    </div>
+    <div class="char_box">
+      <el-row :gutter="20">
+        <el-col :xl="12" :lg="24" :offset="0">
+          <left-chart></left-chart>
+        </el-col>
+        <el-col :xl="12" :lg="24" :offset="0">
+          <right-chart></right-chart>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-
+import leftChart from './leftChart.vue';
+import rightChart from './rightChart.vue';
 export default {
   name: "Dashboard",
-  computed: {
-    ...mapGetters(["name"]),
+  computed: {},
+  components: {
+      leftChart,
+      rightChart
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.dashboard-container {
+  margin: 0 12px;
+}
 .top {
-   margin: 0 12px;
   &_box {
     height: 102px;
     margin: 12px 0px;
-   
+
     .box-card {
       &_name {
         color: rgba(0, 0, 0, 0.45);
@@ -199,5 +223,8 @@ export default {
       }
     }
   }
+}
+.totale_box {
+  margin: 12px 0px;
 }
 </style>
