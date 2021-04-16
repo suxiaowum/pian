@@ -1,7 +1,7 @@
 <template>
   <div class="wxList">
     <headerType :type="0"></headerType>
-    <div class="selectBox">
+    <div class="selectBox ">
       <el-row :gutter="8">
         <el-col :span="4" :offset="0">
           <p class="title">所属分组</p>
