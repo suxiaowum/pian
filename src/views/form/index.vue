@@ -198,7 +198,7 @@ export default {
     reastFun() {
       this.weChartValue = "";
       this.friendType = "";
-      this.sourceValue = "";
+      this.sourceValue = "";   
       this.oneFriend = "";
       this.keyWord = "";
     },
