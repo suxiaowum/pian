@@ -76,6 +76,27 @@ export const constantRoutes = [{
                 component: () =>
                     import ('@/views/tree/index'),
                 meta: { title: '登录微信', icon: 'tree' }
+            },
+            {
+                path: 'arrlogin',
+                name: 'arrlogin',
+                component: () =>
+                    import ('@/views/table/arrlogin'),
+                meta: { title: '批量登录微信', icon: 'el-icon-bangzhu' }
+            },
+            {
+                path: 'code',
+                name: 'code',
+                component: () =>
+                    import ('@/views/table/code'),
+                meta: { title: '扫码登录', icon: 'el-icon-picture' }
+            },
+            {
+                path: 'groupList',
+                name: 'groupList',
+                component: () =>
+                    import ('@/views/table/groupList'),
+                meta: { title: '微信分组', icon: 'el-icon-tickets' }
             }
         ]
     },
@@ -83,13 +104,27 @@ export const constantRoutes = [{
     {
         path: '/form',
         component: Layout,
+        redirect: '/form/index',
+        name: 'form',
+        meta: {
+            title: '通讯录',
+            icon: 'el-icon-notebook-1'
+        },
         children: [{
-            path: 'index',
-            name: 'Form',
-            component: () =>
-                import ('@/views/form/index'),
-            meta: { title: 'Form', icon: 'form' }
-        }]
+                path: 'index',
+                name: 'Form',
+                component: () =>
+                    import ('@/views/form/index'),
+                meta: { title: '好友列表', icon: 'el-icon-user-solid' }
+            },
+            {
+                path: 'groupChart',
+                name: 'Form',
+                component: () =>
+                    import ('@/views/form/groupChart'),
+                meta: { title: '群聊列表', icon: 'el-icon-chat-dot-square' }
+            }
+        ]
     },
 
     {

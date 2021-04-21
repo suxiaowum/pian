@@ -1,6 +1,6 @@
 <template>
   <div id="mailList">
-    <headerType :type="3" />
+    <headerType :type="5" />
     <div class="mailBox">
       <div class="selectBox marpad show_down">
         <el-row :gutter="8">
@@ -192,13 +192,14 @@ export default {
           tage: "无",
         },
       ],
+      currentPage2: 1,
     };
   },
   methods: {
     reastFun() {
       this.weChartValue = "";
       this.friendType = "";
-      this.sourceValue = "";   
+      this.sourceValue = "";
       this.oneFriend = "";
       this.keyWord = "";
     },
@@ -208,6 +209,8 @@ export default {
     handleClick(row) {
       console.log(row);
     },
+    handleSizeChange() {},
+    handleCurrentChange() {},
   },
 };
 </script>
@@ -219,5 +222,9 @@ export default {
   .el-select {
     width: 100%;
   }
+}
+.pageBox {
+  text-align: right;
+  margin-top: 10px;
 }
 </style>

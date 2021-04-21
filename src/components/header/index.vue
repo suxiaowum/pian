@@ -2,7 +2,12 @@
   <div class="header">
     <div class="header_title">{{ name }}</div>
     <div class="header_btn">
-      <el-button round size="medium" @click="gopage(1)" v-if="type == 0">
+      <el-button
+        round
+        size="medium"
+        @click="gopage(1)"
+        v-if="type == 0 || type == 4"
+      >
         客服列表
       </el-button>
       <el-button round size="medium" @click="gopage(2)" v-if="type == 0">
@@ -18,10 +23,20 @@
       <el-button round size="medium" @click="gopage(5)" v-if="type == 0">
         微信分组
       </el-button>
-      <el-button round size="medium" @click="gopage(6)" v-if="type == 1">
+      <el-button
+        round
+        size="medium"
+        @click="gopage(6)"
+        v-if="type == 1 || type == 2 || type == 3"
+      >
         分组列表
       </el-button>
-      <el-button round size="medium" @click="gopage(7)" v-if="type == 1">
+      <el-button
+        round
+        size="medium"
+        @click="gopage(7)"
+        v-if="type == 1 || type == 2 || type == 3 || type == 4"
+      >
         微信列表
       </el-button>
     </div>
@@ -67,8 +82,24 @@ export default {
         this.name = "登录微信";
         this.wxlbBtn = true;
         break;
+      case 2:
+        this.name = "批量登录微信";
+        this.wxlbBtn = true;
+        break;
       case 3:
+        this.name = "扫码登录";
+        this.wxlbBtn = true;
+        break;
+      case 4:
+        this.name = "微信分组";
+        this.wxlbBtn = true;
+        break;
+      case 5:
         this.name = "好友列表";
+        this.wxlbBtn = true;
+        break;
+      case 6:
+        this.name = "群聊列表";
         this.wxlbBtn = true;
         break;
       default:
